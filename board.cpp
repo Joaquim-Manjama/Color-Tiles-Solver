@@ -175,11 +175,15 @@ void Board::down() {
 }
 
 void Board::deleteMatch(Colour colour) {
-    int nodeRow;
-    int nodeColumn;
+    int nodeRow, nodeColumn;
     queue<Position> queue;
 
+    const int rowDirections[4] = {0, -1, 0, 1};
+    const int columnDirections[4] = {-1, 0, 1, 0};
+    const int numOfDirections = 4;
+
     bool found = false;
+    
     // Find the first node of the given colour
     for (nodeRow = 0; nodeRow < rows; nodeRow++) {
         
@@ -190,54 +194,28 @@ void Board::deleteMatch(Colour colour) {
             } 
         }
 
-        if (found) {
-            break;
-        }
+        if (found) break;
     }
 
+    if (!found) return;
+
     // Use bfs to delete
-     Position position = Position(nodeRow, nodeColumn);
+    Position position = Position(nodeRow, nodeColumn);
     queue.push(position);
 
     while (!queue.empty()) {
         Position currentPosition = queue.front();
+        grid[currentPosition.row][currentPosition.column] = 0;
+        
         queue.pop();
 
-        grid[currentPosition.row][currentPosition.column] = 0;
-
-        // LEFT
-        Position possiblePosition = Position(currentPosition.row, currentPosition.column - 1);
-        if (isValid(possiblePosition)) {
+        for (int i = 0; i < numOfDirections; i++) {
             
-            if (grid[possiblePosition.row][possiblePosition.column] == colour) {
-                queue.push(possiblePosition);
-            }
-        }
-
-        // UP
-        possiblePosition = Position(currentPosition.row - 1, currentPosition.column);
-        if (isValid(possiblePosition)) {
+            Position possiblePosition = Position(currentPosition.row + rowDirections[i], currentPosition.column + columnDirections[i]);
             
-            if (grid[possiblePosition.row][possiblePosition.column] == colour) {
-                queue.push(possiblePosition);
-            }
-        }
-
-        // RIGHT
-        possiblePosition = Position(currentPosition.row, currentPosition.column + 1);
-        if (isValid(possiblePosition)) {
-            
-            if (grid[possiblePosition.row][possiblePosition.column] == colour) {
-                queue.push(possiblePosition);
-            }
-        }
-
-        // DOWN
-        possiblePosition = Position(currentPosition.row + 1, currentPosition.column);
-        if (isValid(possiblePosition)) {
-            
-            if (grid[possiblePosition.row][possiblePosition.column] == colour) {
-                queue.push(possiblePosition);
+            if (isValid(possiblePosition)) {
+                
+                if (grid[possiblePosition.row][possiblePosition.column] == colour) queue.push(possiblePosition);
             }
         }
     }

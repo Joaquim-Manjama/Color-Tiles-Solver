@@ -5,6 +5,7 @@ CMakeFiles/main.dir/board.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Sol
   /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.h \
   /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp \
   /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp \
+  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -202,6 +203,9 @@ CMakeFiles/main.dir/board.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Sol
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
+CMakeFiles/main.dir/colour.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp \
+  /usr/include/stdc-predef.h
+
 CMakeFiles/main.dir/main.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/main.cpp \
   /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.h \
   /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp \
@@ -398,6 +402,13 @@ CMakeFiles/main.dir/main.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solv
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
+CMakeFiles/main.dir/movement.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp \
+  /usr/include/stdc-predef.h
+
+CMakeFiles/main.dir/position.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.cpp \
+  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.h \
+  /usr/include/stdc-predef.h
+
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 
@@ -521,16 +532,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solv
 
 /usr/include/c++/13/bits/ios_base.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
-
-/usr/include/c++/13/bits/basic_ios.tcc:
-
-/usr/include/c++/13/bits/nested_exception.h:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/c++/13/bits/basic_ios.h:
-
 /usr/include/c++/13/bits/move.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
@@ -575,6 +576,16 @@ CMakeFiles/main.dir/main.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solv
 
 /usr/include/c++/13/queue:
 
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/usr/include/c++/13/bits/basic_ios.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
+
+/usr/include/c++/13/bits/basic_ios.tcc:
+
+/usr/include/c++/13/bits/nested_exception.h:
+
 /usr/include/alloca.h:
 
 /usr/include/c++/13/bit:
@@ -585,6 +596,8 @@ CMakeFiles/main.dir/main.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solv
 
 /usr/include/c++/13/bits/stringfwd.h:
 
+/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.cpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp:
@@ -594,6 +607,10 @@ CMakeFiles/main.dir/main.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solv
 /usr/include/c++/13/bits/memory_resource.h:
 
 /usr/include/c++/13/bits/invoke.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/13/bits/basic_string.h:
 
 /usr/include/stdc-predef.h:
 
@@ -622,8 +639,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solv
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
-
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/13/ext/type_traits.h:
 
@@ -658,6 +673,8 @@ CMakeFiles/main.dir/main.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solv
 /usr/include/c++/13/bits/functexcept.h:
 
 /usr/include/c++/13/ios:
+
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
@@ -798,7 +815,3 @@ CMakeFiles/main.dir/main.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solv
 /usr/include/c++/13/bits/deque.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/13/bits/basic_string.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:

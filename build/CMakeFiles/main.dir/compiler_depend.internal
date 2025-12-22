@@ -6,6 +6,7 @@ CMakeFiles/main.dir/board.cpp.o
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.h
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
@@ -203,6 +204,10 @@ CMakeFiles/main.dir/board.cpp.o
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
+CMakeFiles/main.dir/colour.cpp.o
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp
+ /usr/include/stdc-predef.h
+
 CMakeFiles/main.dir/main.cpp.o
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/main.cpp
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.h
@@ -399,4 +404,13 @@ CMakeFiles/main.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/sys/types.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
+
+CMakeFiles/main.dir/movement.cpp.o
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp
+ /usr/include/stdc-predef.h
+
+CMakeFiles/main.dir/position.cpp.o
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.cpp
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.h
+ /usr/include/stdc-predef.h
 
