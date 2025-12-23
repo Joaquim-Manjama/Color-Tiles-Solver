@@ -52,8 +52,19 @@ void Board::display() {
     cout << "]" << endl;
 }
 
-void Board::insert(Position position, int value) {
-    grid[position.row][position.column] = value;
+void Board::insert(Position position, Colour colour) {
+    grid[position.row][position.column] = colour;
+
+    int newValue = 1;
+
+    for (const auto& currentColour : coloursInGrid) {
+
+        if (currentColour.first == colour) {
+            newValue = currentColour.second + 1;
+        }
+    }
+
+    coloursInGrid.insert_or_assign(colour, newValue);
 }
 
 void Board::move(Movement direction) {
@@ -84,6 +95,8 @@ void Board::move(Movement direction) {
         default:
             break;
     }
+
+    checkMatches();
 
     display();
 }   
@@ -220,9 +233,92 @@ void Board::deleteMatch(Colour colour) {
         }
     }
 
+    coloursInGrid.erase(colour);
+
     display();
+
+    if (gameWon()) {
+        cout << "You Completed the Puzzle!";
+    }
 }
+
+void Board::checkMatches() {
+
+    for (const auto& currentColour: coloursInGrid) {
+        match(currentColour.first, currentColour.second);
+    }
+}
+
+void Board::match(Colour colour, int requiredCount) {
+    std::queue<Position> q;
+    std::vector<std::vector<bool>> visited(rows, std::vector<bool>(cols, false));
+
+    const int dRow[4] = {0, -1, 0, 1};
+    const int dCol[4] = {-1, 0, 1, 0};
+
+    // 1️⃣ Find a starting position
+    Position start{-1, -1};
+    for (int r = 0; r < rows && start.row == -1; r++) {
+        for (int c = 0; c < cols; c++) {
+            if (grid[r][c] == colour) {
+                start = {r, c};
+                break;
+            }
+        }
+    }
+
+    // 2️⃣ If no matching colour exists, stop
+    if (start.row == -1) return;
+
+    // 3️⃣ BFS
+    int matchCount = 0;
+    q.push(start);
+    visited[start.row][start.column] = true;
+
+    while (!q.empty()) {
+        Position cur = q.front();
+        q.pop();
+        matchCount++;
+
+        for (int i = 0; i < 4; i++) {
+            Position next{
+                cur.row + dRow[i],
+                cur.column + dCol[i]
+            };
+
+            if (isValid(next) &&
+                !visited[next.row][next.column] &&
+                grid[next.row][next.column] == colour) {
+
+                visited[next.row][next.column] = true;
+                q.push(next);
+            }
+        }
+    }
+
+    // 4️⃣ Check match condition
+    if (matchCount >= requiredCount) {
+        std::cout << "BOOM!" << std::endl;
+        deleteMatch(colour);
+    }
+}
+
 
 bool Board::isValid(Position position) {
     return (position.row >= 0 && position.row < rows && position.column >= 0 && position.column < cols);
+}
+
+bool Board::gameWon() {
+
+    for (int i = 0; i < rows; i++) {
+
+        for (int j = 0; j < cols; j++) {
+
+            if (grid[i][j] != 0) {
+                return false;
+            }
+        }
+    }
+
+    return true;
 }

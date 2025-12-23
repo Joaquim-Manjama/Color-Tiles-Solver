@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/board.cpp.o.d"
   "CMakeFiles/main.dir/colour.cpp.o"
   "CMakeFiles/main.dir/colour.cpp.o.d"
+  "CMakeFiles/main.dir/game.cpp.o"
+  "CMakeFiles/main.dir/game.cpp.o.d"
   "CMakeFiles/main.dir/main.cpp.o"
   "CMakeFiles/main.dir/main.cpp.o.d"
   "CMakeFiles/main.dir/movement.cpp.o"

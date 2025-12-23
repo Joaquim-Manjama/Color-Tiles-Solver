@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.cpp" "CMakeFiles/main.dir/board.cpp.o" "gcc" "CMakeFiles/main.dir/board.cpp.o.d"
   "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp" "CMakeFiles/main.dir/colour.cpp.o" "gcc" "CMakeFiles/main.dir/colour.cpp.o.d"
+  "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/game.cpp" "CMakeFiles/main.dir/game.cpp.o" "gcc" "CMakeFiles/main.dir/game.cpp.o.d"
   "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
   "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp" "CMakeFiles/main.dir/movement.cpp.o" "gcc" "CMakeFiles/main.dir/movement.cpp.o.d"
   "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.cpp" "CMakeFiles/main.dir/position.cpp.o" "gcc" "CMakeFiles/main.dir/position.cpp.o.d"

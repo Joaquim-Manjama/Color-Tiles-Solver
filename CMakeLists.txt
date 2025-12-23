@@ -7,4 +7,5 @@ add_executable(main
     movement.cpp
     colour.cpp
     position.cpp
+    game.cpp
 )

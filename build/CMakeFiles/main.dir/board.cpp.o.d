@@ -157,6 +157,12 @@ CMakeFiles/main.dir/board.cpp.o: \
  /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/bits/stl_heap.h \
  /usr/include/c++/13/bits/stl_queue.h \
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.h \
+ /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/stl_map.h \
+ /usr/include/c++/13/bits/stl_multimap.h \
+ /usr/include/c++/13/bits/erase_if.h \
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp \
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp \
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.h
