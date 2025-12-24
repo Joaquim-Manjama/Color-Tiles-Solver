@@ -36,6 +36,8 @@ void Board::initialize()
                 grid[i][j] = Colour::BLOCK;
         }
     }
+
+    display();
 }
 
 // Display the relevant grid to console
@@ -76,6 +78,8 @@ void Board::insert(Position position, Colour colour)
     }
 
     coloursInGrid.insert_or_assign(colour, newValue);
+
+    display();
 }
 
 // Move the board in a given direction
@@ -377,10 +381,8 @@ bool Board::gameWon()
         for (int j = 0; j < cols; j++)
         {
 
-            if (grid[i][j] != 0)
-            {
+            if (grid[i][j] != 0 && grid[i][j] != -1)
                 return false;
-            }
         }
     }
 
@@ -419,3 +421,28 @@ std::string Board::serialize() const
 
     return oss.str();
 }
+
+void Board::removePosition(Position position)
+{
+    Colour colour = static_cast<Colour>(grid[position.row][position.column]);
+
+    grid[position.row][position.column] = Colour::EMPTY;
+    int newValue = 0;
+
+    for (const auto &currentColour : coloursInGrid)
+    {
+        if (currentColour.first == colour)
+        {
+            newValue = currentColour.second - 1;
+            break;
+        }
+    }
+
+    if (newValue <= 0)
+    {
+        coloursInGrid.erase(colour);
+        return;
+    }
+
+    display();
+};

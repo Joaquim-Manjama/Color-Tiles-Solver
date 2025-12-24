@@ -16,6 +16,7 @@ public:
 
     void display();
     void insert(Position position, Colour colour);
+    void removePosition(Position position);
     void move(Movement direction);
     
     bool gameWon();
