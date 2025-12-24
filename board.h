@@ -16,7 +16,7 @@ public:
     void display();
     void insert(Position position, Colour colour);
     void move(Movement direction);
-    void deleteMatch(Colour colour);
+    void deleteMatch(Colour colour, Position startingPos);
     void checkMatches();
 
 private:
@@ -35,5 +35,6 @@ private:
     
     bool isValid(Position position);
     bool gameWon();
+    bool positionVisited(Position position, vector<Position> positions);
 
 };

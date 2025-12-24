@@ -25,7 +25,6 @@ void Board::initialize() {
             } else {
                 grid[i][j] = -2;
             } 
-
         }
     }
 }
@@ -61,6 +60,7 @@ void Board::insert(Position position, Colour colour) {
 
         if (currentColour.first == colour) {
             newValue = currentColour.second + 1;
+            break;
         }
     }
 
@@ -68,8 +68,6 @@ void Board::insert(Position position, Colour colour) {
 }
 
 void Board::move(Movement direction) {
-    // [ LEFT, UP, RIGHT, DOWN]
-
     switch(direction) {
         
         case LEFT:
@@ -105,7 +103,6 @@ void Board::left() {
      bool space;
 
     for (int i = 0; i < rows; i++) {
-
         space = false;
 
         for (int j = 0; j < cols; j++) {
@@ -115,19 +112,16 @@ void Board::left() {
                 grid[i][j] = 0;
             }
             
-            if (grid[i][j] == 0) {
+            if (grid[i][j] == 0)
                 space = true;
-            }
         }
     }
 }
 
 void Board::right() {
-
     bool space;
 
     for (int i = 0; i < rows; i++) {
-
         space = false;
 
         for (int j = cols - 1; j >= 0; j--) {
@@ -137,9 +131,8 @@ void Board::right() {
                 grid[i][j] = 0;
             }
             
-            if (grid[i][j] == 0) {
+            if (grid[i][j] == 0)
                 space = true;
-            }
         }
     }
 }
@@ -157,16 +150,13 @@ void Board::up() {
                 grid[j][i] = 0;
             }
 
-            if (grid[j][i] == 0) {
+            if (grid[j][i] == 0)
                 space = true;
-            }
-
         }
     }
 }
 
 void Board::down() {
-
     bool space;
 
     for (int i = 0; i < cols; i++) {
@@ -179,17 +169,67 @@ void Board::down() {
                 grid[j][i] = 0;
             }
 
-            if (grid[j][i] == 0) {
+            if (grid[j][i] == 0)
                 space = true;
-            }
-
         }
     }
 }
 
-void Board::deleteMatch(Colour colour) {
-    int nodeRow, nodeColumn;
+void Board::deleteMatch(Colour colour, Position startingPos) {
     queue<Position> queue;
+
+    const int rowDirections[4] = {0, -1, 0, 1};
+    const int columnDirections[4] = {-1, 0, 1, 0};
+    const int numOfDirections = 4;
+
+    bool found = false;
+
+    // Use bfs to delete
+    Position position = startingPos;
+    queue.push(position);
+
+    while (!queue.empty()) {
+        Position currentPosition = queue.front();
+        grid[currentPosition.row][currentPosition.column] = 0;
+        
+        queue.pop();
+
+        for (int i = 0; i < numOfDirections; i++) {
+            
+            Position possiblePosition = Position(currentPosition.row + rowDirections[i], currentPosition.column + columnDirections[i]);
+            
+            if (isValid(possiblePosition)) {
+                
+                if (grid[possiblePosition.row][possiblePosition.column] == colour) queue.push(possiblePosition);
+            }
+        }
+    }
+
+    coloursInGrid.erase(colour);
+
+    if (gameWon())
+        cout << "You Completed the Puzzle!";
+}
+
+void Board::checkMatches() {
+
+    // Iterate over a copy to avoid modifying the map while iterating it (erase in deleteMatch)
+    vector<pair<Colour,int>> coloursCopy;
+    for (const auto& p : coloursInGrid) {
+        coloursCopy.push_back(p);
+    }
+
+    for (const auto& currentColour: coloursCopy) {
+        match(currentColour.first, currentColour.second);
+    }
+}
+
+void Board::match(Colour colour, int count) {
+    int matchCount = count;
+    int nodeRow, nodeColumn;
+
+    queue<Position> queue;
+    vector<Position> visited;
 
     const int rowDirections[4] = {0, -1, 0, 1};
     const int columnDirections[4] = {-1, 0, 1, 0};
@@ -215,94 +255,42 @@ void Board::deleteMatch(Colour colour) {
     // Use bfs to delete
     Position position = Position(nodeRow, nodeColumn);
     queue.push(position);
+    visited.push_back(position);
+    matchCount--;
 
     while (!queue.empty()) {
         Position currentPosition = queue.front();
-        grid[currentPosition.row][currentPosition.column] = 0;
-        
         queue.pop();
 
         for (int i = 0; i < numOfDirections; i++) {
             
             Position possiblePosition = Position(currentPosition.row + rowDirections[i], currentPosition.column + columnDirections[i]);
             
-            if (isValid(possiblePosition)) {
+            if (isValid(possiblePosition) && !positionVisited(possiblePosition, visited)) {
                 
-                if (grid[possiblePosition.row][possiblePosition.column] == colour) queue.push(possiblePosition);
+                if (grid[possiblePosition.row][possiblePosition.column] == colour) {
+                    queue.push(possiblePosition);
+                    visited.push_back(possiblePosition);
+                    matchCount--;
+                }
             }
         }
     }
 
-    coloursInGrid.erase(colour);
-
-    display();
-
-    if (gameWon()) {
-        cout << "You Completed the Puzzle!";
-    }
+    if (matchCount == 0)
+        deleteMatch(colour, position);
 }
 
-void Board::checkMatches() {
+bool Board::positionVisited(Position position, vector<Position> positions) {
 
-    for (const auto& currentColour: coloursInGrid) {
-        match(currentColour.first, currentColour.second);
+    for (Position currentPosition : positions) {
+
+        if (currentPosition.equals(position))
+            return true;
     }
+
+    return false;
 }
-
-void Board::match(Colour colour, int requiredCount) {
-    std::queue<Position> q;
-    std::vector<std::vector<bool>> visited(rows, std::vector<bool>(cols, false));
-
-    const int dRow[4] = {0, -1, 0, 1};
-    const int dCol[4] = {-1, 0, 1, 0};
-
-    // 1️⃣ Find a starting position
-    Position start{-1, -1};
-    for (int r = 0; r < rows && start.row == -1; r++) {
-        for (int c = 0; c < cols; c++) {
-            if (grid[r][c] == colour) {
-                start = {r, c};
-                break;
-            }
-        }
-    }
-
-    // 2️⃣ If no matching colour exists, stop
-    if (start.row == -1) return;
-
-    // 3️⃣ BFS
-    int matchCount = 0;
-    q.push(start);
-    visited[start.row][start.column] = true;
-
-    while (!q.empty()) {
-        Position cur = q.front();
-        q.pop();
-        matchCount++;
-
-        for (int i = 0; i < 4; i++) {
-            Position next{
-                cur.row + dRow[i],
-                cur.column + dCol[i]
-            };
-
-            if (isValid(next) &&
-                !visited[next.row][next.column] &&
-                grid[next.row][next.column] == colour) {
-
-                visited[next.row][next.column] = true;
-                q.push(next);
-            }
-        }
-    }
-
-    // 4️⃣ Check match condition
-    if (matchCount >= requiredCount) {
-        std::cout << "BOOM!" << std::endl;
-        deleteMatch(colour);
-    }
-}
-
 
 bool Board::isValid(Position position) {
     return (position.row >= 0 && position.row < rows && position.column >= 0 && position.column < cols);
