@@ -8,12 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.cpp" "CMakeFiles/main.dir/board.cpp.o" "gcc" "CMakeFiles/main.dir/board.cpp.o.d"
-  "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp" "CMakeFiles/main.dir/colour.cpp.o" "gcc" "CMakeFiles/main.dir/colour.cpp.o.d"
-  "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/game.cpp" "CMakeFiles/main.dir/game.cpp.o" "gcc" "CMakeFiles/main.dir/game.cpp.o.d"
   "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
-  "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp" "CMakeFiles/main.dir/movement.cpp.o" "gcc" "CMakeFiles/main.dir/movement.cpp.o.d"
-  "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.cpp" "CMakeFiles/main.dir/position.cpp.o" "gcc" "CMakeFiles/main.dir/position.cpp.o.d"
+  "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/board.cpp" "CMakeFiles/main.dir/src/board.cpp.o" "gcc" "CMakeFiles/main.dir/src/board.cpp.o.d"
+  "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/game.cpp" "CMakeFiles/main.dir/src/game.cpp.o" "gcc" "CMakeFiles/main.dir/src/game.cpp.o.d"
+  "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/position.cpp" "CMakeFiles/main.dir/src/position.cpp.o" "gcc" "CMakeFiles/main.dir/src/position.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

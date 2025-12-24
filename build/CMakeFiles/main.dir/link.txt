@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/board.cpp.o CMakeFiles/main.dir/movement.cpp.o CMakeFiles/main.dir/colour.cpp.o CMakeFiles/main.dir/position.cpp.o CMakeFiles/main.dir/game.cpp.o -o main 
+/usr/bin/c++ CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/src/board.cpp.o CMakeFiles/main.dir/src/position.cpp.o CMakeFiles/main.dir/src/game.cpp.o -o main 

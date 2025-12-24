@@ -129,78 +129,6 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-board.o: board.cpp.o
-.PHONY : board.o
-
-# target to build an object file
-board.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/board.cpp.o
-.PHONY : board.cpp.o
-
-board.i: board.cpp.i
-.PHONY : board.i
-
-# target to preprocess a source file
-board.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/board.cpp.i
-.PHONY : board.cpp.i
-
-board.s: board.cpp.s
-.PHONY : board.s
-
-# target to generate assembly for a file
-board.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/board.cpp.s
-.PHONY : board.cpp.s
-
-colour.o: colour.cpp.o
-.PHONY : colour.o
-
-# target to build an object file
-colour.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/colour.cpp.o
-.PHONY : colour.cpp.o
-
-colour.i: colour.cpp.i
-.PHONY : colour.i
-
-# target to preprocess a source file
-colour.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/colour.cpp.i
-.PHONY : colour.cpp.i
-
-colour.s: colour.cpp.s
-.PHONY : colour.s
-
-# target to generate assembly for a file
-colour.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/colour.cpp.s
-.PHONY : colour.cpp.s
-
-game.o: game.cpp.o
-.PHONY : game.o
-
-# target to build an object file
-game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/game.cpp.o
-.PHONY : game.cpp.o
-
-game.i: game.cpp.i
-.PHONY : game.i
-
-# target to preprocess a source file
-game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/game.cpp.i
-.PHONY : game.cpp.i
-
-game.s: game.cpp.s
-.PHONY : game.s
-
-# target to generate assembly for a file
-game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/game.cpp.s
-.PHONY : game.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -225,53 +153,77 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-movement.o: movement.cpp.o
-.PHONY : movement.o
+src/board.o: src/board.cpp.o
+.PHONY : src/board.o
 
 # target to build an object file
-movement.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/movement.cpp.o
-.PHONY : movement.cpp.o
+src/board.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/board.cpp.o
+.PHONY : src/board.cpp.o
 
-movement.i: movement.cpp.i
-.PHONY : movement.i
+src/board.i: src/board.cpp.i
+.PHONY : src/board.i
 
 # target to preprocess a source file
-movement.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/movement.cpp.i
-.PHONY : movement.cpp.i
+src/board.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/board.cpp.i
+.PHONY : src/board.cpp.i
 
-movement.s: movement.cpp.s
-.PHONY : movement.s
+src/board.s: src/board.cpp.s
+.PHONY : src/board.s
 
 # target to generate assembly for a file
-movement.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/movement.cpp.s
-.PHONY : movement.cpp.s
+src/board.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/board.cpp.s
+.PHONY : src/board.cpp.s
 
-position.o: position.cpp.o
-.PHONY : position.o
+src/game.o: src/game.cpp.o
+.PHONY : src/game.o
 
 # target to build an object file
-position.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/position.cpp.o
-.PHONY : position.cpp.o
+src/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/game.cpp.o
+.PHONY : src/game.cpp.o
 
-position.i: position.cpp.i
-.PHONY : position.i
+src/game.i: src/game.cpp.i
+.PHONY : src/game.i
 
 # target to preprocess a source file
-position.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/position.cpp.i
-.PHONY : position.cpp.i
+src/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/game.cpp.i
+.PHONY : src/game.cpp.i
 
-position.s: position.cpp.s
-.PHONY : position.s
+src/game.s: src/game.cpp.s
+.PHONY : src/game.s
 
 # target to generate assembly for a file
-position.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/position.cpp.s
-.PHONY : position.cpp.s
+src/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/game.cpp.s
+.PHONY : src/game.cpp.s
+
+src/position.o: src/position.cpp.o
+.PHONY : src/position.o
+
+# target to build an object file
+src/position.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/position.cpp.o
+.PHONY : src/position.cpp.o
+
+src/position.i: src/position.cpp.i
+.PHONY : src/position.i
+
+# target to preprocess a source file
+src/position.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/position.cpp.i
+.PHONY : src/position.cpp.i
+
+src/position.s: src/position.cpp.s
+.PHONY : src/position.s
+
+# target to generate assembly for a file
+src/position.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/position.cpp.s
+.PHONY : src/position.cpp.s
 
 # Help Target
 help:
@@ -282,24 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
-	@echo "... board.o"
-	@echo "... board.i"
-	@echo "... board.s"
-	@echo "... colour.o"
-	@echo "... colour.i"
-	@echo "... colour.s"
-	@echo "... game.o"
-	@echo "... game.i"
-	@echo "... game.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... movement.o"
-	@echo "... movement.i"
-	@echo "... movement.s"
-	@echo "... position.o"
-	@echo "... position.i"
-	@echo "... position.s"
+	@echo "... src/board.o"
+	@echo "... src/board.i"
+	@echo "... src/board.s"
+	@echo "... src/game.o"
+	@echo "... src/game.i"
+	@echo "... src/game.s"
+	@echo "... src/position.o"
+	@echo "... src/position.i"
+	@echo "... src/position.s"
 .PHONY : help
 
 

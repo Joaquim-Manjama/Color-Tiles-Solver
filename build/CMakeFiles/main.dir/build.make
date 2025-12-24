@@ -83,97 +83,65 @@ CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
-CMakeFiles/main.dir/board.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/board.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.cpp
-CMakeFiles/main.dir/board.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/board.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/board.cpp.o -MF CMakeFiles/main.dir/board.cpp.o.d -o CMakeFiles/main.dir/board.cpp.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.cpp
+CMakeFiles/main.dir/src/board.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/board.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/board.cpp
+CMakeFiles/main.dir/src/board.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/board.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/board.cpp.o -MF CMakeFiles/main.dir/src/board.cpp.o.d -o CMakeFiles/main.dir/src/board.cpp.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/board.cpp
 
-CMakeFiles/main.dir/board.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/board.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.cpp > CMakeFiles/main.dir/board.cpp.i
+CMakeFiles/main.dir/src/board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/board.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/board.cpp > CMakeFiles/main.dir/src/board.cpp.i
 
-CMakeFiles/main.dir/board.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/board.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.cpp -o CMakeFiles/main.dir/board.cpp.s
+CMakeFiles/main.dir/src/board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/board.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/board.cpp -o CMakeFiles/main.dir/src/board.cpp.s
 
-CMakeFiles/main.dir/movement.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/movement.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp
-CMakeFiles/main.dir/movement.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/movement.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/movement.cpp.o -MF CMakeFiles/main.dir/movement.cpp.o.d -o CMakeFiles/main.dir/movement.cpp.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp
+CMakeFiles/main.dir/src/position.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/position.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/position.cpp
+CMakeFiles/main.dir/src/position.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/position.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/position.cpp.o -MF CMakeFiles/main.dir/src/position.cpp.o.d -o CMakeFiles/main.dir/src/position.cpp.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/position.cpp
 
-CMakeFiles/main.dir/movement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/movement.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp > CMakeFiles/main.dir/movement.cpp.i
+CMakeFiles/main.dir/src/position.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/position.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/position.cpp > CMakeFiles/main.dir/src/position.cpp.i
 
-CMakeFiles/main.dir/movement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/movement.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp -o CMakeFiles/main.dir/movement.cpp.s
+CMakeFiles/main.dir/src/position.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/position.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/position.cpp -o CMakeFiles/main.dir/src/position.cpp.s
 
-CMakeFiles/main.dir/colour.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/colour.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp
-CMakeFiles/main.dir/colour.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/colour.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/colour.cpp.o -MF CMakeFiles/main.dir/colour.cpp.o.d -o CMakeFiles/main.dir/colour.cpp.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp
+CMakeFiles/main.dir/src/game.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/game.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/game.cpp
+CMakeFiles/main.dir/src/game.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/game.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/game.cpp.o -MF CMakeFiles/main.dir/src/game.cpp.o.d -o CMakeFiles/main.dir/src/game.cpp.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/game.cpp
 
-CMakeFiles/main.dir/colour.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/colour.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp > CMakeFiles/main.dir/colour.cpp.i
+CMakeFiles/main.dir/src/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/game.cpp > CMakeFiles/main.dir/src/game.cpp.i
 
-CMakeFiles/main.dir/colour.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/colour.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp -o CMakeFiles/main.dir/colour.cpp.s
-
-CMakeFiles/main.dir/position.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/position.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.cpp
-CMakeFiles/main.dir/position.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/position.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/position.cpp.o -MF CMakeFiles/main.dir/position.cpp.o.d -o CMakeFiles/main.dir/position.cpp.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.cpp
-
-CMakeFiles/main.dir/position.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/position.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.cpp > CMakeFiles/main.dir/position.cpp.i
-
-CMakeFiles/main.dir/position.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/position.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.cpp -o CMakeFiles/main.dir/position.cpp.s
-
-CMakeFiles/main.dir/game.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/game.cpp.o: /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/game.cpp
-CMakeFiles/main.dir/game.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/game.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/game.cpp.o -MF CMakeFiles/main.dir/game.cpp.o.d -o CMakeFiles/main.dir/game.cpp.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/game.cpp
-
-CMakeFiles/main.dir/game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/game.cpp > CMakeFiles/main.dir/game.cpp.i
-
-CMakeFiles/main.dir/game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/game.cpp -o CMakeFiles/main.dir/game.cpp.s
+CMakeFiles/main.dir/src/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/game.cpp -o CMakeFiles/main.dir/src/game.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
-"CMakeFiles/main.dir/board.cpp.o" \
-"CMakeFiles/main.dir/movement.cpp.o" \
-"CMakeFiles/main.dir/colour.cpp.o" \
-"CMakeFiles/main.dir/position.cpp.o" \
-"CMakeFiles/main.dir/game.cpp.o"
+"CMakeFiles/main.dir/src/board.cpp.o" \
+"CMakeFiles/main.dir/src/position.cpp.o" \
+"CMakeFiles/main.dir/src/game.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
-main: CMakeFiles/main.dir/board.cpp.o
-main: CMakeFiles/main.dir/movement.cpp.o
-main: CMakeFiles/main.dir/colour.cpp.o
-main: CMakeFiles/main.dir/position.cpp.o
-main: CMakeFiles/main.dir/game.cpp.o
+main: CMakeFiles/main.dir/src/board.cpp.o
+main: CMakeFiles/main.dir/src/position.cpp.o
+main: CMakeFiles/main.dir/src/game.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

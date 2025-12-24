@@ -1,9 +1,9 @@
 #pragma once
 #include <vector>
 #include <map>
-#include "movement.cpp"
-#include "colour.cpp"
 #include "position.h"
+#include "colour.h"
+#include "movement.h"
 
 using namespace std;
 
@@ -17,8 +17,7 @@ public:
     void display();
     void insert(Position position, Colour colour);
     void move(Movement direction);
-    void deleteMatch(Colour colour, Position startingPos);
-    void checkMatches();
+    bool gameWon();
 
 private:
     int rows;
@@ -33,8 +32,9 @@ private:
     void up();
     void down();
     void match(Colour colour, int count);
+    void deleteMatch(Colour colour, Position startingPos);
+    void checkMatches();
 
     bool isValid(Position position);
-    bool gameWon();
     bool positionVisited(Position position, vector<Position> positions);
 };

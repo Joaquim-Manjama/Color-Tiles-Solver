@@ -24,7 +24,7 @@ void Game::play()
         cout << "3. RIGHT" << endl;
         cout << "4. DOWN" << endl;
         cout << "5. Exit" << endl;
-        cout << ": " << endl;
+        cout << ": ";
 
         cin >> option;
 
@@ -48,11 +48,18 @@ void Game::play()
             break;
 
         case 5:
-            cout << ":(" << endl;
+            cout << "BYE:(" << endl;
+            break;
 
         default:
             cout << "Invalid Move!" << endl;
-            ;
+            break;
+        }
+
+        if (board.gameWon())
+        {
+            cout << "Congratulations! You have won the game!" << endl;
+            break;
         }
 
     } while (option != 5);

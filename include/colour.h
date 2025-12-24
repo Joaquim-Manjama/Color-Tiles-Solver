@@ -1,3 +1,5 @@
+#pragma once
+
 // Game colours
 enum Colour
 {

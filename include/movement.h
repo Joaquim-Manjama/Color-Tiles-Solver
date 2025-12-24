@@ -1,3 +1,6 @@
+#pragma once
+
+// Game movements
 enum Movement
 {
     LEFT,

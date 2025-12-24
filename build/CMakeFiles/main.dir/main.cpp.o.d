@@ -150,7 +150,7 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/board.h \
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/include/board.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
@@ -161,7 +161,7 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/13/bits/stl_map.h \
  /usr/include/c++/13/bits/stl_multimap.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/movement.cpp \
- /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/colour.cpp \
- /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/position.h \
- /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/game.h
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/include/position.h \
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/include/colour.h \
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/include/movement.h \
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/include/game.h

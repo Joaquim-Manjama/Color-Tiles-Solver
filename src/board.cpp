@@ -250,9 +250,6 @@ void Board::deleteMatch(Colour colour, Position startingPos)
     }
 
     coloursInGrid.erase(colour);
-
-    if (gameWon())
-        cout << "You Completed the Puzzle!";
 }
 
 // Check for matches on the board
