@@ -1,2 +1,6 @@
-*.swp
+# Folders
+.vscode/
 build/
+
+# Files
+*.swp
