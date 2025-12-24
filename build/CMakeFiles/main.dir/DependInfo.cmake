@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/board.cpp" "CMakeFiles/main.dir/src/board.cpp.o" "gcc" "CMakeFiles/main.dir/src/board.cpp.o.d"
   "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/game.cpp" "CMakeFiles/main.dir/src/game.cpp.o" "gcc" "CMakeFiles/main.dir/src/game.cpp.o.d"
   "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/position.cpp" "CMakeFiles/main.dir/src/position.cpp.o" "gcc" "CMakeFiles/main.dir/src/position.cpp.o.d"
+  "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/src/solver.cpp" "CMakeFiles/main.dir/src/solver.cpp.o" "gcc" "CMakeFiles/main.dir/src/solver.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

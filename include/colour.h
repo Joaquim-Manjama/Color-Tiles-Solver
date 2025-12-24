@@ -3,6 +3,9 @@
 // Game colours
 enum Colour
 {
-    RED = 1,
-    YELLOW = 2
+    BLOCK = -1,
+    EMPTY = 0,
+    RED_BLOCK = 1,
+    YELLOW_BLOCK = 2,
+    BLUE_BLOCK = 3
 };

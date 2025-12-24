@@ -164,4 +164,5 @@ CMakeFiles/main.dir/main.cpp.o: \
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/include/position.h \
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/include/colour.h \
  /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/include/movement.h \
- /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/include/game.h
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/include/solver.h \
+ /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/src/raylib.h

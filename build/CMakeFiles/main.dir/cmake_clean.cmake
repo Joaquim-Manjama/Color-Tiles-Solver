@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/game.cpp.o.d"
   "CMakeFiles/main.dir/src/position.cpp.o"
   "CMakeFiles/main.dir/src/position.cpp.o.d"
+  "CMakeFiles/main.dir/src/solver.cpp.o"
+  "CMakeFiles/main.dir/src/solver.cpp.o.d"
   "main"
   "main.pdb"
 )

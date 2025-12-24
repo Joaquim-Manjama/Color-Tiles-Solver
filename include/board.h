@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <map>
+#include <string>
 #include "position.h"
 #include "colour.h"
 #include "movement.h"
@@ -13,12 +14,15 @@ public:
     Board() {};
     Board(int rows, int cols);
 
-    void initialize();
     void display();
     void insert(Position position, Colour colour);
     void move(Movement direction);
+    
     bool gameWon();
 
+    Board copy();
+    std::string serialize() const;
+    
 private:
     int rows;
     int cols;
@@ -27,6 +31,7 @@ private:
 
     map<Colour, int> coloursInGrid;
 
+    void initialize();
     void left();
     void right();
     void up();

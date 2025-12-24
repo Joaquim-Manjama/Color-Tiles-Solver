@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#include <sstream>
 #include "board.h"
 
 using namespace std;
@@ -7,33 +8,27 @@ using namespace std;
 // Main constructor
 Board::Board(int rows, int cols) : rows(rows), cols(cols)
 {
-
     // Get maximum size of grid
     size = sizeof(grid) / sizeof(grid[0]);
+    initialize();
 }
 
 // Set all relevant grid positions to zero
 void Board::initialize()
 {
-
     // Iterate though whole grid
     for (int i = 0; i < size; i++)
     {
-
         for (int j = 0; j < size; j++)
         {
-
             // Only zero relevant part of grid
             if (i < rows && j < cols)
             {
-                grid[i][j] = 0;
-
+                grid[i][j] = Colour::EMPTY;
                 // Avoid junk values
             }
             else
-            {
-                grid[i][j] = -2;
-            }
+                grid[i][j] = Colour::BLOCK;
         }
     }
 }
@@ -41,12 +36,10 @@ void Board::initialize()
 // Display the relevant grid to console
 void Board::display()
 {
-
     cout << "[" << endl;
 
     for (int i = 0; i < rows; i++)
     {
-
         cout << " [ ";
 
         for (int j = 0; j < cols; j++)
@@ -54,14 +47,11 @@ void Board::display()
             cout << grid[i][j];
 
             if (j < cols - 1)
-            {
                 cout << ", ";
-            }
         }
 
         cout << " ]" << endl;
     }
-
     cout << "]" << endl;
 }
 
@@ -69,12 +59,10 @@ void Board::display()
 void Board::insert(Position position, Colour colour)
 {
     grid[position.row][position.column] = colour;
-
     int newValue = 1;
 
     for (const auto &currentColour : coloursInGrid)
     {
-
         if (currentColour.first == colour)
         {
             newValue = currentColour.second + 1;
@@ -90,7 +78,6 @@ void Board::move(Movement direction)
 {
     switch (direction)
     {
-
     case LEFT:
         cout << "Move Left" << endl;
         left();
@@ -134,11 +121,15 @@ void Board::left()
 
             if (space)
             {
-                grid[i][j - 1] = grid[i][j];
-                grid[i][j] = 0;
+                if (grid[i][j] != Colour::BLOCK)
+                {
+                    grid[i][j - 1] = grid[i][j];
+                    grid[i][j] = Colour::EMPTY;
+                } 
+                else space = false;
             }
 
-            if (grid[i][j] == 0)
+            if (grid[i][j] == Colour::EMPTY)
                 space = true;
         }
     }
@@ -157,11 +148,16 @@ void Board::right()
 
             if (space)
             {
-                grid[i][j + 1] = grid[i][j];
-                grid[i][j] = 0;
+                if (grid[i][j] != Colour::BLOCK)
+                {
+                    grid[i][j + 1] = grid[i][j];
+                    grid[i][j] = Colour::EMPTY;
+                } 
+                else space = false;
+                
             }
 
-            if (grid[i][j] == 0)
+            if (grid[i][j] == Colour::EMPTY)
                 space = true;
         }
     }
@@ -180,11 +176,15 @@ void Board::up()
 
             if (space)
             {
-                grid[j - 1][i] = grid[j][i];
-                grid[j][i] = 0;
+                if (grid[j][i] != Colour::BLOCK)
+                {
+                    grid[j - 1][i] = grid[j][i];
+                    grid[j][i] = Colour::EMPTY;
+                } 
+                else space = false;
             }
 
-            if (grid[j][i] == 0)
+            if (grid[j][i] == Colour::EMPTY)
                 space = true;
         }
     }
@@ -203,11 +203,15 @@ void Board::down()
 
             if (space)
             {
-                grid[j + 1][i] = grid[j][i];
-                grid[j][i] = 0;
+                if (grid[j][i] != Colour::BLOCK)
+                {
+                    grid[j + 1][i] = grid[j][i];
+                    grid[j][i] = Colour::EMPTY;
+                } 
+                else space = false;
             }
 
-            if (grid[j][i] == 0)
+            if (grid[j][i] == Colour::EMPTY)
                 space = true;
         }
     }
@@ -231,7 +235,7 @@ void Board::deleteMatch(Colour colour, Position startingPos)
     while (!queue.empty())
     {
         Position currentPosition = queue.front();
-        grid[currentPosition.row][currentPosition.column] = 0;
+        grid[currentPosition.row][currentPosition.column] = Colour::EMPTY;
 
         queue.pop();
 
@@ -265,7 +269,8 @@ void Board::checkMatches()
 
     for (const auto &currentColour : coloursCopy)
     {
-        match(currentColour.first, currentColour.second);
+        if (currentColour.first > 0)
+            match(currentColour.first, currentColour.second);
     }
 }
 
@@ -375,4 +380,37 @@ bool Board::gameWon()
     }
 
     return true;
+}
+
+Board Board::copy()
+{
+    Board newBoard = Board(rows, cols);
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            newBoard.grid[i][j] = grid[i][j];
+        }
+    }
+
+    newBoard.coloursInGrid = coloursInGrid;
+
+    return newBoard;
+}
+
+std::string Board::serialize() const
+{
+    std::ostringstream oss;
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            oss << grid[i][j] << ',';
+        }
+        oss << ';';
+    }
+
+    return oss.str();
 }

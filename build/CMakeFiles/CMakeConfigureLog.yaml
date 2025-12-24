@@ -529,3 +529,272 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "build/_deps/raylib-src/cmake/AddIfFlagCompiles.cmake:3 (CHECK_C_COMPILER_FLAG)"
+      - "build/_deps/raylib-src/cmake/CompilerFlags.cmake:5 (add_if_flag_compiles)"
+      - "build/_deps/raylib-src/CMakeLists.txt:29 (include)"
+    checks:
+      - "Performing Test COMPILER_HAS_THOSE_TOGGLES"
+    directories:
+      source: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-wx6seb"
+      binary: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-wx6seb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/cmake"
+    buildResult:
+      variable: "COMPILER_HAS_THOSE_TOGGLES"
+      cached: true
+      stdout: |
+        Change Dir: '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-wx6seb'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f763b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f763b.dir/build.make CMakeFiles/cmTC_f763b.dir/build
+        gmake[1]: Entering directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-wx6seb'
+        Building C object CMakeFiles/cmTC_f763b.dir/src.c.o
+        /usr/bin/cc -DCOMPILER_HAS_THOSE_TOGGLES  -Werror=pointer-arith -o CMakeFiles/cmTC_f763b.dir/src.c.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-wx6seb/src.c
+        Linking C executable cmTC_f763b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f763b.dir/link.txt --verbose=1
+        /usr/bin/cc -rdynamic CMakeFiles/cmTC_f763b.dir/src.c.o -o cmTC_f763b 
+        gmake[1]: Leaving directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-wx6seb'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "build/_deps/raylib-src/src/external/glfw/CMakeLists.txt:64 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-EPyfDo"
+      binary: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-EPyfDo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_MODULE_PATH: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/cmake;/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-EPyfDo'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f1008/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f1008.dir/build.make CMakeFiles/cmTC_f1008.dir/build
+        gmake[1]: Entering directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-EPyfDo'
+        Building C object CMakeFiles/cmTC_f1008.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -o CMakeFiles/cmTC_f1008.dir/src.c.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-EPyfDo/src.c
+        Linking C executable cmTC_f1008
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1008.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -rdynamic CMakeFiles/cmTC_f1008.dir/src.c.o -o cmTC_f1008 
+        gmake[1]: Leaving directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-EPyfDo'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:682 (check_library_exists)"
+      - "build/_deps/raylib-src/src/external/glfw/src/CMakeLists.txt:187 (find_package)"
+    checks:
+      - "Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so"
+    directories:
+      source: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-AKdVVA"
+      binary: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-AKdVVA"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/cmake;/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "X11_LIB_X11_SOLO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-AKdVVA'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4747e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4747e.dir/build.make CMakeFiles/cmTC_4747e.dir/build
+        gmake[1]: Entering directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-AKdVVA'
+        Building C object CMakeFiles/cmTC_4747e.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=XOpenDisplay -std=gnu99 -o CMakeFiles/cmTC_4747e.dir/CheckFunctionExists.c.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-AKdVVA/CheckFunctionExists.c
+        Linking C executable cmTC_4747e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4747e.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_4747e.dir/CheckFunctionExists.c.o -o cmTC_4747e  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+        gmake[1]: Leaving directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-AKdVVA'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:697 (check_function_exists)"
+      - "build/_deps/raylib-src/src/external/glfw/src/CMakeLists.txt:187 (find_package)"
+    checks:
+      - "Looking for gethostbyname"
+    directories:
+      source: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-29K1kJ"
+      binary: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-29K1kJ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/cmake;/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_GETHOSTBYNAME"
+      cached: true
+      stdout: |
+        Change Dir: '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-29K1kJ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_44ec5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_44ec5.dir/build.make CMakeFiles/cmTC_44ec5.dir/build
+        gmake[1]: Entering directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-29K1kJ'
+        Building C object CMakeFiles/cmTC_44ec5.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=gethostbyname -std=gnu99 -o CMakeFiles/cmTC_44ec5.dir/CheckFunctionExists.c.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-29K1kJ/CheckFunctionExists.c
+        Linking C executable cmTC_44ec5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44ec5.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_44ec5.dir/CheckFunctionExists.c.o -o cmTC_44ec5 
+        gmake[1]: Leaving directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-29K1kJ'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:711 (check_function_exists)"
+      - "build/_deps/raylib-src/src/external/glfw/src/CMakeLists.txt:187 (find_package)"
+    checks:
+      - "Looking for connect"
+    directories:
+      source: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-T0WqM4"
+      binary: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-T0WqM4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/cmake;/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_CONNECT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-T0WqM4'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a3332/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a3332.dir/build.make CMakeFiles/cmTC_a3332.dir/build
+        gmake[1]: Entering directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-T0WqM4'
+        Building C object CMakeFiles/cmTC_a3332.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=connect -std=gnu99 -o CMakeFiles/cmTC_a3332.dir/CheckFunctionExists.c.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-T0WqM4/CheckFunctionExists.c
+        Linking C executable cmTC_a3332
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3332.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_a3332.dir/CheckFunctionExists.c.o -o cmTC_a3332 
+        gmake[1]: Leaving directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-T0WqM4'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:720 (check_function_exists)"
+      - "build/_deps/raylib-src/src/external/glfw/src/CMakeLists.txt:187 (find_package)"
+    checks:
+      - "Looking for remove"
+    directories:
+      source: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-N42R1e"
+      binary: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-N42R1e"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/cmake;/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_REMOVE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-N42R1e'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bfbe0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bfbe0.dir/build.make CMakeFiles/cmTC_bfbe0.dir/build
+        gmake[1]: Entering directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-N42R1e'
+        Building C object CMakeFiles/cmTC_bfbe0.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=remove -std=gnu99 -o CMakeFiles/cmTC_bfbe0.dir/CheckFunctionExists.c.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-N42R1e/CheckFunctionExists.c
+        Linking C executable cmTC_bfbe0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bfbe0.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_bfbe0.dir/CheckFunctionExists.c.o -o cmTC_bfbe0 
+        gmake[1]: Leaving directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-N42R1e'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:729 (check_function_exists)"
+      - "build/_deps/raylib-src/src/external/glfw/src/CMakeLists.txt:187 (find_package)"
+    checks:
+      - "Looking for shmat"
+    directories:
+      source: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-3Qr3BS"
+      binary: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-3Qr3BS"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/cmake;/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_SHMAT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-3Qr3BS'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_86fc4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_86fc4.dir/build.make CMakeFiles/cmTC_86fc4.dir/build
+        gmake[1]: Entering directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-3Qr3BS'
+        Building C object CMakeFiles/cmTC_86fc4.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=shmat -std=gnu99 -o CMakeFiles/cmTC_86fc4.dir/CheckFunctionExists.c.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-3Qr3BS/CheckFunctionExists.c
+        Linking C executable cmTC_86fc4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86fc4.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_86fc4.dir/CheckFunctionExists.c.o -o cmTC_86fc4 
+        gmake[1]: Leaving directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-3Qr3BS'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindX11.cmake:739 (check_library_exists)"
+      - "build/_deps/raylib-src/src/external/glfw/src/CMakeLists.txt:187 (find_package)"
+    checks:
+      - "Looking for IceConnectionNumber in ICE"
+    directories:
+      source: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-1MkyFG"
+      binary: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-1MkyFG"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/cmake;/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
+      cached: true
+      stdout: |
+        Change Dir: '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-1MkyFG'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e3d53/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e3d53.dir/build.make CMakeFiles/cmTC_e3d53.dir/build
+        gmake[1]: Entering directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-1MkyFG'
+        Building C object CMakeFiles/cmTC_e3d53.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -std=gnu99 -o CMakeFiles/cmTC_e3d53.dir/CheckFunctionExists.c.o -c /home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-1MkyFG/CheckFunctionExists.c
+        Linking C executable cmTC_e3d53
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3d53.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_e3d53.dir/CheckFunctionExists.c.o -o cmTC_e3d53  -lICE 
+        gmake[1]: Leaving directory '/home/manjama/Desktop/CrackZone/Color-Tiles-Solver/build/CMakeFiles/CMakeScratch/TryCompile-1MkyFG'
+        
+      exitCode: 0
+...
