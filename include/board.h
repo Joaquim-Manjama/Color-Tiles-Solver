@@ -20,13 +20,16 @@ public:
     
     bool gameWon();
 
+    // Returns a pointer to rows of the internal grid: caller should treat as `const int (*)[16]`
+    const int (*getGrid() const)[8];
+
     Board copy();
     std::string serialize() const;
     
 private:
     int rows;
     int cols;
-    int grid[4][4];
+    int grid[8][8];
     int size;
 
     map<Colour, int> coloursInGrid;

@@ -13,6 +13,11 @@ Board::Board(int rows, int cols) : rows(rows), cols(cols)
     initialize();
 }
 
+const int (*Board::getGrid() const)[8]
+{
+    return grid;
+}
+
 // Set all relevant grid positions to zero
 void Board::initialize()
 {
