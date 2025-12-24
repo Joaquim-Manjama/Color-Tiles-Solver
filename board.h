@@ -7,11 +7,12 @@
 
 using namespace std;
 
-class Board {
+class Board
+{
 public:
     Board() {};
     Board(int rows, int cols);
-    
+
     void initialize();
     void display();
     void insert(Position position, Colour colour);
@@ -32,9 +33,8 @@ private:
     void up();
     void down();
     void match(Colour colour, int count);
-    
+
     bool isValid(Position position);
     bool gameWon();
     bool positionVisited(Position position, vector<Position> positions);
-
 };

@@ -4,43 +4,57 @@
 
 using namespace std;
 
-Board::Board(int rows, int cols) : rows(rows), cols(cols) {
+// Main constructor
+Board::Board(int rows, int cols) : rows(rows), cols(cols)
+{
 
     // Get maximum size of grid
     size = sizeof(grid) / sizeof(grid[0]);
-}   
+}
 
-void Board::initialize() { 
+// Set all relevant grid positions to zero
+void Board::initialize()
+{
 
     // Iterate though whole grid
-    for (int i = 0; i < size; i++) {
-        
-        for (int j = 0; j < size; j++) {
+    for (int i = 0; i < size; i++)
+    {
+
+        for (int j = 0; j < size; j++)
+        {
 
             // Only zero relevant part of grid
-            if (i < rows && j < cols) {
+            if (i < rows && j < cols)
+            {
                 grid[i][j] = 0;
-            
-            // Avoid junk values
-            } else {
+
+                // Avoid junk values
+            }
+            else
+            {
                 grid[i][j] = -2;
-            } 
+            }
         }
     }
 }
 
-void Board::display() {
+// Display the relevant grid to console
+void Board::display()
+{
 
     cout << "[" << endl;
-    
-    for (int i = 0; i < rows; i++) {
+
+    for (int i = 0; i < rows; i++)
+    {
 
         cout << " [ ";
 
-        for (int j = 0; j < cols; j++) {
+        for (int j = 0; j < cols; j++)
+        {
             cout << grid[i][j];
 
-            if (j < cols - 1) {
+            if (j < cols - 1)
+            {
                 cout << ", ";
             }
         }
@@ -51,14 +65,18 @@ void Board::display() {
     cout << "]" << endl;
 }
 
-void Board::insert(Position position, Colour colour) {
+// Insert a colour at a given position
+void Board::insert(Position position, Colour colour)
+{
     grid[position.row][position.column] = colour;
 
     int newValue = 1;
 
-    for (const auto& currentColour : coloursInGrid) {
+    for (const auto &currentColour : coloursInGrid)
+    {
 
-        if (currentColour.first == colour) {
+        if (currentColour.first == colour)
+        {
             newValue = currentColour.second + 1;
             break;
         }
@@ -67,85 +85,101 @@ void Board::insert(Position position, Colour colour) {
     coloursInGrid.insert_or_assign(colour, newValue);
 }
 
-void Board::move(Movement direction) {
-    switch(direction) {
-        
-        case LEFT:
-            cout << "Move Left" << endl;
-            left();
-            break;
+// Move the board in a given direction
+void Board::move(Movement direction)
+{
+    switch (direction)
+    {
 
-        case UP:
-            cout << "Move Up" << endl;
-            up();
-            break;
+    case LEFT:
+        cout << "Move Left" << endl;
+        left();
+        break;
 
-        case RIGHT:
-            cout << "Move Right" << endl;
-            right();
-            break;
+    case UP:
+        cout << "Move Up" << endl;
+        up();
+        break;
 
-        case DOWN:
-            cout << "Move Down" << endl;
-            down();
-            break;
-        
-        default:
-            break;
+    case RIGHT:
+        cout << "Move Right" << endl;
+        right();
+        break;
+
+    case DOWN:
+        cout << "Move Down" << endl;
+        down();
+        break;
+
+    default:
+        break;
     }
 
     checkMatches();
 
     display();
-}   
+}
 
-void Board::left() {
-     bool space;
+// Move functions for each direction
+void Board::left()
+{
+    bool space;
 
-    for (int i = 0; i < rows; i++) {
+    for (int i = 0; i < rows; i++)
+    {
         space = false;
 
-        for (int j = 0; j < cols; j++) {
-            
-            if (space) {
+        for (int j = 0; j < cols; j++)
+        {
+
+            if (space)
+            {
                 grid[i][j - 1] = grid[i][j];
                 grid[i][j] = 0;
             }
-            
+
             if (grid[i][j] == 0)
                 space = true;
         }
     }
 }
 
-void Board::right() {
+void Board::right()
+{
     bool space;
 
-    for (int i = 0; i < rows; i++) {
+    for (int i = 0; i < rows; i++)
+    {
         space = false;
 
-        for (int j = cols - 1; j >= 0; j--) {
-            
-            if (space) {
+        for (int j = cols - 1; j >= 0; j--)
+        {
+
+            if (space)
+            {
                 grid[i][j + 1] = grid[i][j];
                 grid[i][j] = 0;
             }
-            
+
             if (grid[i][j] == 0)
                 space = true;
         }
     }
 }
 
-void Board::up() {
+void Board::up()
+{
     bool space;
 
-    for (int i = 0; i < cols; i++) {
+    for (int i = 0; i < cols; i++)
+    {
         space = false;
 
-        for (int j = 0; j < rows; j++) {
+        for (int j = 0; j < rows; j++)
+        {
 
-            if (space) {
+            if (space)
+            {
                 grid[j - 1][i] = grid[j][i];
                 grid[j][i] = 0;
             }
@@ -156,15 +190,19 @@ void Board::up() {
     }
 }
 
-void Board::down() {
+void Board::down()
+{
     bool space;
 
-    for (int i = 0; i < cols; i++) {
+    for (int i = 0; i < cols; i++)
+    {
         space = false;
 
-        for (int j = rows - 1; j >= 0; j--) {
+        for (int j = rows - 1; j >= 0; j--)
+        {
 
-            if (space) {
+            if (space)
+            {
                 grid[j + 1][i] = grid[j][i];
                 grid[j][i] = 0;
             }
@@ -175,7 +213,9 @@ void Board::down() {
     }
 }
 
-void Board::deleteMatch(Colour colour, Position startingPos) {
+// Delete matched colours starting from a given position
+void Board::deleteMatch(Colour colour, Position startingPos)
+{
     queue<Position> queue;
 
     const int rowDirections[4] = {0, -1, 0, 1};
@@ -188,19 +228,23 @@ void Board::deleteMatch(Colour colour, Position startingPos) {
     Position position = startingPos;
     queue.push(position);
 
-    while (!queue.empty()) {
+    while (!queue.empty())
+    {
         Position currentPosition = queue.front();
         grid[currentPosition.row][currentPosition.column] = 0;
-        
+
         queue.pop();
 
-        for (int i = 0; i < numOfDirections; i++) {
-            
+        for (int i = 0; i < numOfDirections; i++)
+        {
+
             Position possiblePosition = Position(currentPosition.row + rowDirections[i], currentPosition.column + columnDirections[i]);
-            
-            if (isValid(possiblePosition)) {
-                
-                if (grid[possiblePosition.row][possiblePosition.column] == colour) queue.push(possiblePosition);
+
+            if (isValid(possiblePosition))
+            {
+
+                if (grid[possiblePosition.row][possiblePosition.column] == colour)
+                    queue.push(possiblePosition);
             }
         }
     }
@@ -211,20 +255,26 @@ void Board::deleteMatch(Colour colour, Position startingPos) {
         cout << "You Completed the Puzzle!";
 }
 
-void Board::checkMatches() {
+// Check for matches on the board
+void Board::checkMatches()
+{
 
     // Iterate over a copy to avoid modifying the map while iterating it (erase in deleteMatch)
-    vector<pair<Colour,int>> coloursCopy;
-    for (const auto& p : coloursInGrid) {
+    vector<pair<Colour, int>> coloursCopy;
+    for (const auto &p : coloursInGrid)
+    {
         coloursCopy.push_back(p);
     }
 
-    for (const auto& currentColour: coloursCopy) {
+    for (const auto &currentColour : coloursCopy)
+    {
         match(currentColour.first, currentColour.second);
     }
 }
 
-void Board::match(Colour colour, int count) {
+// Match function to find and delete matches of a given colour
+void Board::match(Colour colour, int count)
+{
     int matchCount = count;
     int nodeRow, nodeColumn;
 
@@ -236,21 +286,26 @@ void Board::match(Colour colour, int count) {
     const int numOfDirections = 4;
 
     bool found = false;
-    
+
     // Find the first node of the given colour
-    for (nodeRow = 0; nodeRow < rows; nodeRow++) {
-        
-        for (nodeColumn = 0; nodeColumn < cols; nodeColumn++) {
-            if (grid[nodeRow][nodeColumn] == colour) {
+    for (nodeRow = 0; nodeRow < rows; nodeRow++)
+    {
+
+        for (nodeColumn = 0; nodeColumn < cols; nodeColumn++)
+        {
+            if (grid[nodeRow][nodeColumn] == colour)
+            {
                 found = true;
                 break;
-            } 
+            }
         }
 
-        if (found) break;
+        if (found)
+            break;
     }
 
-    if (!found) return;
+    if (!found)
+        return;
 
     // Use bfs to delete
     Position position = Position(nodeRow, nodeColumn);
@@ -258,17 +313,21 @@ void Board::match(Colour colour, int count) {
     visited.push_back(position);
     matchCount--;
 
-    while (!queue.empty()) {
+    while (!queue.empty())
+    {
         Position currentPosition = queue.front();
         queue.pop();
 
-        for (int i = 0; i < numOfDirections; i++) {
-            
+        for (int i = 0; i < numOfDirections; i++)
+        {
+
             Position possiblePosition = Position(currentPosition.row + rowDirections[i], currentPosition.column + columnDirections[i]);
-            
-            if (isValid(possiblePosition) && !positionVisited(possiblePosition, visited)) {
-                
-                if (grid[possiblePosition.row][possiblePosition.column] == colour) {
+
+            if (isValid(possiblePosition) && !positionVisited(possiblePosition, visited))
+            {
+
+                if (grid[possiblePosition.row][possiblePosition.column] == colour)
+                {
                     queue.push(possiblePosition);
                     visited.push_back(possiblePosition);
                     matchCount--;
@@ -281,9 +340,12 @@ void Board::match(Colour colour, int count) {
         deleteMatch(colour, position);
 }
 
-bool Board::positionVisited(Position position, vector<Position> positions) {
+// Check if a position has already been visited
+bool Board::positionVisited(Position position, vector<Position> positions)
+{
 
-    for (Position currentPosition : positions) {
+    for (Position currentPosition : positions)
+    {
 
         if (currentPosition.equals(position))
             return true;
@@ -292,17 +354,24 @@ bool Board::positionVisited(Position position, vector<Position> positions) {
     return false;
 }
 
-bool Board::isValid(Position position) {
+// Check if a position is valid on the board
+bool Board::isValid(Position position)
+{
     return (position.row >= 0 && position.row < rows && position.column >= 0 && position.column < cols);
 }
 
-bool Board::gameWon() {
+// Check if the game has been won
+bool Board::gameWon()
+{
 
-    for (int i = 0; i < rows; i++) {
+    for (int i = 0; i < rows; i++)
+    {
 
-        for (int j = 0; j < cols; j++) {
+        for (int j = 0; j < cols; j++)
+        {
 
-            if (grid[i][j] != 0) {
+            if (grid[i][j] != 0)
+            {
                 return false;
             }
         }

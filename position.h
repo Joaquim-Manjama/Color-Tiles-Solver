@@ -1,11 +1,12 @@
 #pragma once
 
-class Position {
-    public:
-        Position();
-        Position(int row, int column);
-        int row;
-        int column;
+class Position
+{
+public:
+    Position();
+    Position(int row, int column);
+    int row;
+    int column;
 
-        bool equals(Position position);
+    bool equals(Position position);
 };

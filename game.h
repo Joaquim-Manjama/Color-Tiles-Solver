@@ -1,7 +1,8 @@
 #pragma once
 #include "board.h"
 
-class Game {
+class Game
+{
 public:
     Game();
     void play();

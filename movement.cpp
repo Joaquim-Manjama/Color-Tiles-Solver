@@ -1,3 +1,7 @@
-enum Movement {
-    LEFT, UP, RIGHT, DOWN
+enum Movement
+{
+    LEFT,
+    UP,
+    RIGHT,
+    DOWN
 };
