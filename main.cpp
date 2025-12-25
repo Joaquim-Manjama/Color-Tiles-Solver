@@ -21,7 +21,7 @@ const int MAX_CELLS = 8;
 
 const int NUM_COLOURS = 6;
 
-int movesRemaining = 0;
+int movesRemaining = 5;
 int colours[NUM_COLOURS] = {    Colour::BLOCK, Colour::RED_BLOCK, Colour::YELLOW_BLOCK,
                                 Colour::BLUE_BLOCK, Colour::ORANGE_BLOCK, Colour::LIGHT_BLUE_BLOCK};
 
@@ -106,9 +106,9 @@ int main()
             board.move(UP);
 
             if (board.gameWon()) {
-                cout << "Congratulations! You have won the game!" << endl;
                 board = Board(numCells, numCells);
                 solution = {};
+                movesRemaining += 1;
             }
         }
 
@@ -116,9 +116,9 @@ int main()
             board.move(DOWN);
 
             if (board.gameWon()) {
-                cout << "Congratulations! You have won the game!" << endl;
                 board = Board(numCells, numCells);
                 solution = {};
+                movesRemaining += 1;
             }
         }
 
@@ -126,9 +126,9 @@ int main()
             board.move(LEFT);
 
             if (board.gameWon()) {
-                cout << "Congratulations! You have won the game!" << endl;
                 board = Board(numCells, numCells);
                 solution = {};
+                movesRemaining += 1;
             }
         }
 
@@ -136,9 +136,9 @@ int main()
             board.move(RIGHT);
 
             if (board.gameWon()) {
-                cout << "Congratulations! You have won the game!" << endl;
                 board = Board(numCells, numCells);
                 solution = {};
+                movesRemaining += 1;
             }
         }
 
@@ -158,7 +158,6 @@ int main()
         if (IsKeyPressed(KEY_ENTER)) {
             Solver solver = Solver(board, movesRemaining); 
             solution = solver.solve();
-            DrawText("Calculating solution...", 850, 680, 15, LIGHTGRAY);
         }
 
         // Update
